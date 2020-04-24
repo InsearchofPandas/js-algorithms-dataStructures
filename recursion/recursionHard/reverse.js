@@ -1,6 +1,6 @@
 function reverse(input) {
   // add whatever parameters you deem necessary - good luck!
-  let output = '';
+  let output = ""
 
   function helper(helperInput) {}
 }
