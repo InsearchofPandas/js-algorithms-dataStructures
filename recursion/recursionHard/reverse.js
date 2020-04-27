@@ -1,9 +1,17 @@
 function reverse(input) {
-  // add whatever parameters you deem necessary - good luck!
-  let output = ""
+  let output = '';
 
-  function helper(helperInput) {}
+  //   output = input.slice(0, -1);
+  function helper(helperInput) {
+    if (helperInput.length === 0) {
+      return;
+    }
+    output = output.concat(helperInput.slice(-1));
+
+    return helper(helperInput.slice(0, -1));
+  }
+  helper(input);
+  return output;
 }
-
-reverse('awesome'); // 'emosewa'
-reverse('rithmschool'); // 'loohcsmhtir'
+console.log(reverse('awesome'));
+console.log(reverse('rithmschool'));
